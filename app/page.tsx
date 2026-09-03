@@ -335,24 +335,25 @@ export default function Home() {
           </div>
         </section>
           {/* 6. LOCAL CRAFTSMANSHIP VIDEO */}
-        <section className="py-24 bg-charcoal border-t border-ivory/10 px-6">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-24 bg-charcoal border-t border-ivory/10">
+          {/* Text Container (Keeps text narrow and readable) */}
+          <div className="max-w-4xl mx-auto text-center px-6 mb-12">
             <span className="text-xs uppercase tracking-[0.25em] text-gold font-semibold block mb-2">
               Featured Reel
             </span>
             <h3 className="text-3xl md:text-5xl font-serif text-ivory mb-6">
               Craftsmanship in Motion
             </h3>
-            <p className="text-ivory/70 max-w-2xl mx-auto mb-10 text-base leading-relaxed">
+            <p className="text-ivory/70 max-w-2xl mx-auto text-base leading-relaxed">
               Watch real behind-the-scenes footage from Heaven Furniture Mart showcasing luxury finishes and bespoke customization.
             </p>
+          </div>
 
-            <div className="flex justify-center w-full">
-              <PageVideo />
-            </div>
+          {/* Video Container (Allows video to stretch edge-to-edge) */}
+          <div className="w-full px-4 md:px-8">
+            <PageVideo />
           </div>
         </section>
-
         {/* 7. MILESTONES & RECOGNITION */}
         <section className="py-24 px-6 bg-charcoal">
           <div className="max-w-5xl mx-auto">

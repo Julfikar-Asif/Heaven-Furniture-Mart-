@@ -85,7 +85,7 @@ export default function PageVideo() {
   return (
     <div 
       onClick={togglePlay}
-      className="relative w-full max-w-[360px] h-[600px] mx-auto rounded-lg overflow-hidden border border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.9)] group cursor-pointer"
+      className="relative w-full max-w-25xl aspect-video mx-auto rounded-lg overflow-hidden border border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.9)] group cursor-pointer"
     >
       {/* Golden Glow Accent */}
       <div className="absolute inset-0 border border-gold/20 rounded-lg pointer-events-none transition-all duration-500 group-hover:border-gold/60 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.25)] z-30" />
