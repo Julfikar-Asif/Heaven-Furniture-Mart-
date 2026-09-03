@@ -58,7 +58,7 @@ export default function PageVideo() {
       {/* Top Badge */}
       <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-charcoal/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-gold/30 pointer-events-none">
         <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-        <span className="text-[10px] uppercase tracking-widest text-ivory font-semibold">Live Workshop</span>
+        <span className="text-[10px] uppercase tracking-widest text-ivory font-semibold">ShowRoom </span>
       </div>
 
       {/* Sound Toggle Button */}
