@@ -1,19 +1,75 @@
 @import "tailwindcss";
 
 @theme {
-  --color-charcoal: #1A2421;
-  --color-ivory: #F4F1EB;
-  --color-gold: #C5A880;
-  --color-brown: #3E2723;
-  --color-tan: #D2B48C;
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
+  /* Typography */
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  
+  /* Brand Colors from Hackathon Brief */
+  --color-charcoal: #16191c;
+  --color-ivory: #f8f6f0;
+  --color-gold: #c5a059;
+  --color-brown: #3e2723;
+  --color-tan: #d2b48c;
 }
 
-/* Optional: Add basic body styling to enforce colors globally */
-@layer base {
-  body {
-    background-color: var(--color-charcoal);
-    color: var(--color-ivory);
+/* Base styles for a smooth, dark-mode default */
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+/* Custom Text Selection */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal);
+}
+::-moz-selection {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal);
+}
+/* Infinite Scrolling Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+/* Fade and Slide Up Entrance Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+/* Multi-Directional Entrance Animations */
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-left { animation: fadeLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-right { animation: fadeRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-down { animation: fadeDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }

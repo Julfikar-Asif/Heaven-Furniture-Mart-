@@ -1,30 +1,32 @@
-import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import FloatingWhatsApp from "./FloatingWhatsApp";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const playfair = Playfair_Display({ 
+  subsets: ["latin"], 
+  variable: "--font-playfair",
+  display: "swap",
+});
 
-export const metadata: Metadata = {
-  title: "Heaven Furniture Mart | Bespoke Furniture in Chattogram",
-  description: "Custom furniture built to your space, size, and taste.",
+const montserrat = Montserrat({ 
+  subsets: ["latin"], 
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+export const metadata = {
+  title: "Heaven Furniture Mart | Bespoke Luxury",
+  description: "Chattogram's leading luxury studio crafting bespoke interior pieces.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-charcoal`}>
-        <Navbar />
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable} scroll-smooth`}>
+      <body className="font-sans antialiased bg-charcoal text-ivory">
         {children}
-        <Footer />
-        <FloatingWhatsApp />
       </body>
     </html>
   );
